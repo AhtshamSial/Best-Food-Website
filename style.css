@@ -1,0 +1,75 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    overflow-x: hidden;
+}
+.navbar {
+    height: 80px !important;
+    background-color: white !important;
+}
+.container-fluid,.navbar-brand {
+    height: 80px;
+}
+.navbar-brand span {
+    color: orange;
+}
+.nav-item {
+    font-size: 1.1rem;
+    font-weight: 630;
+}
+.cart-search :last-child {
+    color: orange;
+    font-size: 1.2rem;
+}
+.login-signup .ls-btn {
+    width: 7rem;
+    height: 2.5rem;
+    margin-left: 0.70rem;
+    border: 2px solid orange;   
+
+}
+.login-signup .login {
+    color: orange;
+    font-weight: 600;
+    background-color: white;
+}
+.login-signup .signup {
+    background-color: orange;
+    color: white;
+    font-weight: 600;
+}
+ @media (max-width: 992px) {
+    .img-container {
+        width: 100% !important;
+        clip-path: polygon( 0 0, 100% 0,100% 100% , 0% 100%) !important;
+        margin-bottom: 3rem;
+
+    }
+    .text {
+        text-align: center;
+    }
+    .extra {
+        display: none;
+    }
+}
+.bsb-hero-2 {
+    transition: margin-top 0.3s ease-in-out;
+}
+.m-top-320 {
+    margin-top: 320px;
+}
+.img-container {
+    height:350px;
+    width: 60%;
+    clip-path: polygon( 0 0, 100% 0,100% 100% , 30% 100%);
+}
+.img-fluid{
+    height: 350px;
+    background-image: url("Hero-section.jpg");
+    background-size: cover;
+    background-position: 25% 75%;
+}

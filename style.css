@@ -116,17 +116,26 @@ hr {
     }
 
     .apps img {
-        width: 120px !important;
-        height: 40px !important;
+        width: 80px !important;
+        height: 30px !important;
     }
     .menu-option {
         padding-left: 100px !important;
         padding-right: 20px !important;
     }
+    .inner-container h5 {
+        font-size: 1rem !important;
+    }
 }
 @media (max-width : 500px) {
     .menu-option {
         padding-left: 200px !important;
+    }
+    
+}
+@media (max-width : 380px) {
+    .menu-option {
+        padding-left: 260px !important;
     }
     
 }
@@ -217,7 +226,7 @@ hr {
     z-index: 1;
 }
 .inner-container h5 {
-    width: 60%;
+    width: 80%;
 }
 .apps img {
     width: 170px;

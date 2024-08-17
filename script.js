@@ -13,10 +13,10 @@ navbarCollapse.addEventListener('click' , () => {
 
 });
 
-// window.onload = function() {
-//     window.document.querySelector('.allfood').click();
+window.onload = function() {
+    window.document.querySelector('.allfood').click();
 
-// }
+}
 
 const cardsdData = [
     {
@@ -67,25 +67,33 @@ const cardsdData = [
         price : 30,
         type : "lunch",
     },
+    {
+        name : "Rind Snacks",
+        url : "img9.jpg",
+        price : 10,
+        type : "snacks",
+    },
 
 ];
 
-// function getDishes(type) {
-//     cardsdData.map( (card) => {
-//         if(type === card.type) {
-//         allFood.innerHTML += `
-//         <div class="card">
-//             <img class="card-img-top" src="${card.url}" alt="${card.name}">
-//             <div class="card-body">
-//                 <h5 class="card-title">${card.name}</h5>
-//                 <p class="price">$${card.price}</p>
-//                 <a href="#" class="btn btn-primary"><i class="fa-solid fa-plus"></i></a>
-//             </div>
-//         </div>
-//     `;
-//         }
-//     })
-// }
+function getDishes(type) {
+    cardsdData.map( (card) => {
+        if(type === card.type) {
+            cards.innerHTML +=`
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
+      <div class="card">
+        <img class="card-img-top h-50 object-fit-cover" src="${card.url}" alt="${card.name}">
+        <div class="card-body">
+          <h5 class="card-title ">${card.name}</h5>
+          <p class="price position-absolute bottom-0 m-0 start-1 fw-bold fs-6">$${card.price}</p>
+          <a href="#" class="btn btn-primary position-absolute bottom-0 end-0 rounded-0 border-0 d-flex justify-content-center align-items-center"><i class="fa-solid fa-plus"></i></a>
+        </div>
+      </div>
+    </div>`
+
+        }
+    })
+}
 function getAllFood() {
     cardsdData.map( (card) => {
         cards.innerHTML +=`
@@ -109,13 +117,14 @@ btns.forEach((btn) => {
     btn.addEventListener('click', () => {
         removeActiveClasses()
         btn.classList.add('active-btn')
-        // allFood.innerHTML= "";
-        // if(btn.classList[1] === "allfood"){
-        //     getAllFood();
-        // }
-        // else{
-        //     getDishes(btn.classList[1]);
-        // }
+        console.log(btn.classList[2])
+        cards.innerHTML = "";
+        if(btn.classList[2] === "allfood"){
+            getAllFood();
+        }
+        else{
+            getDishes(btn.classList[2]);
+        }
     })
 })
 

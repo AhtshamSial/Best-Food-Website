@@ -4,6 +4,20 @@
     box-sizing: border-box;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.bg-custom {
+    background-color: orange !important;
+    &:hover{
+        background-color: orange;
+        box-shadow: 1px 1px 10px  rgba(0, 0, 0, 0.3);
+    }
+    &:active {
+        background-color: orange !important;
+        border-color:orange !important;
+    }
+}
+.bg-white:hover {
+    box-shadow: 1px 1px 10px  rgba(0, 0, 0, 0.2);
+}
 body {
     overflow-x: hidden;
 }
@@ -22,7 +36,6 @@ body {
     font-weight: 630;
 }
 .cart-search :last-child {
-    color: orange;
     font-size: 1.2rem;
 }
 .login-signup .ls-btn {
@@ -35,14 +48,121 @@ body {
 .login-signup .login {
     color: orange;
     font-weight: 600;
-    background-color: white;
 }
 .login-signup .signup {
-    background-color: orange;
     color: white;
     font-weight: 600;
 }
- @media (max-width: 992px) {
+
+.bsb-hero-2 {
+    transition: margin-top 0.3s ease-in-out;
+}
+.m-top-320 {
+    margin-top: 320px;
+}
+.bsb-hero-2 .img-container {
+    height:400px;
+    width: 60%;
+    clip-path: polygon( 0 0, 100% 0,100% 100% , 30% 100%);
+}
+.bsb-hero-2 .img-container .img-fluid{
+    height: 400px;
+    background-image: url("Hero-section.jpg");
+    background-size: cover;
+    background-position: 25% 75%;
+}
+
+
+.menu-option {
+    height: 70px;
+}
+hr {
+    width: 3rem;
+    background-color: orange;
+    height: 3px;
+}
+.btn-light:hover ,.active-btn{
+        background-color: orange !important;
+        color: white !important;
+        border: transparent;
+        box-shadow: 1px 1px 10px  rgba(0, 0, 0, 0.3);
+
+}
+.option-list {
+    background-color: antiquewhite;
+}
+.card {
+    width: 220px;
+    height: 20rem;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .menu-section .container {
+        max-width: 760px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .menu-section .container {
+        max-width: 1000px;
+    }
+}
+
+@media (max-width: 575px) {
+    .menu-section .container {
+        max-width: 280px !important;
+    }
+
+    .apps img {
+        width: 120px !important;
+        height: 40px !important;
+    }
+    .menu-option {
+        padding-left: 100px !important;
+        padding-right: 20px !important;
+    }
+}
+@media (max-width : 500px) {
+    .menu-option {
+        padding-left: 200px !important;
+    }
+    
+}
+
+.card-body .btn {
+    background-color: orange;
+    width: 2.5rem;
+    height: 1.7rem;
+    border-bottom-right-radius: 6px !important;
+}
+
+.card-body p {
+    left: 0.5rem;
+}
+
+.hiring-section .img-container {
+    background-color: antiquewhite;
+    height:400px;
+    width: 60%;
+    clip-path: polygon( 0 0, 80% 0,100% 100% , 0% 100%);
+}
+.hiring-section .text {
+    height: 400px;
+
+}
+.hiring-section .img-container .img-fluid {
+    height: 400px;
+    background-image: url("chef.jpg");
+    background-size: cover;
+    background-position: 25% 75%;
+
+}
+.hiring-section .text p {
+    height: 100px;
+}
+@media (max-width: 992px) {
     .img-container {
         width: 100% !important;
         clip-path: polygon( 0 0, 100% 0,100% 100% , 0% 100%) !important;
@@ -50,26 +170,71 @@ body {
 
     }
     .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
+    }
+    .text h4 {
+        margin: 0 !important;
+        padding: 0 !important;
     }
     .extra {
         display: none;
     }
 }
-.bsb-hero-2 {
-    transition: margin-top 0.3s ease-in-out;
+
+.choice {
+    width: 140px;
+    height: 150px;
+    padding: 0 !important;
 }
-.m-top-320 {
-    margin-top: 320px;
+.choice div {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+
 }
-.img-container {
-    height:350px;
-    width: 60%;
-    clip-path: polygon( 0 0, 100% 0,100% 100% , 30% 100%);
+.services .img-container {
+    background-color: antiquewhite;
+    height: 400px;
 }
-.img-fluid{
-    height: 350px;
-    background-image: url("Hero-section.jpg");
+.services .img-fluid {
+    height: 400px;
+    background-image: url("services.jpg");
     background-size: cover;
-    background-position: 25% 75%;
+    background-position: center;
 }
+.inner-container {
+    width:35%;
+    height: auto;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+}
+.inner-container h5 {
+    width: 60%;
+}
+.apps img {
+    width: 170px;
+    height: 50px;
+    opacity: 1;
+    border-radius: 7px;
+    object-position: center;
+}
+
+.menu-option {
+    white-space: nowrap;
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+  
+  
+  

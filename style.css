@@ -97,6 +97,9 @@ hr {
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
 
 }
+.card-img-top {
+    height: 65%;
+}
 
 @media (min-width: 768px) and (max-width: 991px) {
     .menu-section .container {
@@ -125,6 +128,10 @@ hr {
     }
     .inner-container h5 {
         font-size: 1rem !important;
+    }
+    .card {
+        width: 270px;
+        height: 23rem;
     }
 }
 @media (max-width : 500px) {

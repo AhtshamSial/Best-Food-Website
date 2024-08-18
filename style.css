@@ -198,6 +198,9 @@ hr {
     .extra {
         display: none;
     }
+    .hiring-section .text p {
+        width: 60%;
+    }
 }
 
 .choice {

@@ -58,7 +58,7 @@ body {
     transition: margin-top 0.3s ease-in-out;
 }
 .m-top-320 {
-    margin-top: 320px;
+    margin-top: 360px;
 }
 .bsb-hero-2 .img-container {
     height:400px;
@@ -81,7 +81,13 @@ hr {
     background-color: orange;
     height: 3px;
 }
-.btn-light:hover ,.active-btn{
+.menu-option .btn-light:hover {
+    border: transparent;
+    color: orange;
+    background-color: #f8f9fa;
+
+}
+.active-btn{
         background-color: orange !important;
         color: white !important;
         border: transparent;
@@ -132,6 +138,10 @@ hr {
     .card {
         width: 270px;
         height: 23rem;
+    }
+    .contact-us .container {
+        box-shadow: none !important;
+        border-radius: 0 !important;
     }
 }
 @media (max-width : 500px) {
@@ -190,6 +200,7 @@ hr {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        width: 100%;
     }
     .text h4 {
         margin: 0 !important;
@@ -254,6 +265,58 @@ hr {
     scroll-snap-type: x mandatory;
 }
 
+
+/* Contact Us */
+
+.hero {
+    background-color: orange;
+    color: white;
+    height: 400px;
+}
+.hero h2 {
+    font-weight: 600;
+}
+.hero p {
+    width: 50%;
+}
+@media (max-width: 768px) {
+    .hero p {
+        width: 100%;
+    }    
+}
+.contact-us .container {
+    background-color: white;
+    position: relative;
+    top: -100px;
+    width: 1000px;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+.input-data ,.info {
+    height: 450px;
+}
+.input-data {
+    background-color:rgba(128, 128, 128, 0.1)  ;
+}
+.info h5 i {
+    color: orange;
+    margin-right: 1rem;
+}
+.input-data button {
+    background-color: orange !important;
+    height: 2.5rem;
+    font-weight: 600;
+    &:hover {
+        box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.3);
+    }
+} 
+.form-control {
+    transition: box-shadow 0.3s ease-in-out !important;
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 0.1rem orange;
+    }
+}
   
   
   

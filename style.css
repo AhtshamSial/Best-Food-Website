@@ -15,15 +15,33 @@
         border-color:orange !important;
     }
 }
+.px-6 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+.mx-6 {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+.fw-600 {
+    font-weight: 600;
+}
 .bg-white:hover {
     box-shadow: 1px 1px 10px  rgba(0, 0, 0, 0.2);
 }
 body {
     overflow-x: hidden;
 }
+.pb-360 {
+    padding-bottom: 430px;
+}
 .navbar {
     height: 80px !important;
     background-color: white !important;
+    transition: padding-bottom 0.5s ease-in-out !important;
+}
+.navbar-nav {
+    width: 42% !important;
 }
 .container-fluid,.navbar-brand {
     height: 80px;
@@ -53,12 +71,12 @@ body {
     color: white;
     font-weight: 600;
 }
-
 .bsb-hero-2 {
-    transition: margin-top 0.3s ease-in-out;
+    position: relative;
+    z-index: 2;
 }
-.m-top-320 {
-    margin-top: 360px;
+.bsb-hero-2 .container .text {
+    margin-left: 5rem;
 }
 .bsb-hero-2 .img-container {
     height:400px;
@@ -111,12 +129,19 @@ hr {
     .menu-section .container {
         max-width: 760px;
     }
+    .footer p {
+        font-size: 0.65rem !important;
+    }
 }
 
 @media (min-width: 1200px) {
     .menu-section .container {
         max-width: 1000px;
     }
+    /* .carousel-img {
+        width: ;
+    } */
+
 }
 
 @media (max-width: 575px) {
@@ -143,17 +168,43 @@ hr {
         box-shadow: none !important;
         border-radius: 0 !important;
     }
+    .footer {
+        padding-top: 1rem !important;
+    }
+    .footer p {
+        font-size: 0.6rem !important;
+        
+    }
 }
 @media (max-width : 500px) {
     .menu-option {
         padding-left: 200px !important;
     }
-    
+    .carousel-item .container .row {
+        padding: 0 2rem;
+    }
+    .footer {
+        padding: 2rem !important;
+    }
+    .footer p {
+        font-size: 0.65rem !important;
+    }
 }
 @media (max-width : 380px) {
     .menu-option {
         padding-left: 260px !important;
     }
+    /* .carousel-item .container .row {
+        padding: 0 1rem;
+    } */
+    .carousel-img {
+        height: 350px !important;
+    }
+    .footer :nth-child(1) {
+        width: 150px;
+        
+    }
+
     
 }
 
@@ -206,11 +257,32 @@ hr {
         margin: 0 !important;
         padding: 0 !important;
     }
-    .extra {
-        display: none;
-    }
     .hiring-section .text p {
         width: 60%;
+    }
+    .wrap-992 {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 0.5rem;
+    }
+    .caption {
+        display: flex;
+        flex-direction: column;
+        width: 100% !important;
+        align-items: center;
+        margin-bottom: 4rem;
+    }
+    .caption p {
+        text-align: center;
+    }
+    .footer .phone {
+        width: 150px;
+    }
+    .w-20 {
+        width: 160px !important;
+    }
+    .copyright p {
+        font-size: 0.7rem !important;
     }
 }
 
@@ -267,6 +339,9 @@ hr {
 
 
 /* Contact Us */
+.z-index-3 {
+    z-index: 3;
+}
 
 .hero {
     background-color: orange;
@@ -282,6 +357,9 @@ hr {
 @media (max-width: 768px) {
     .hero p {
         width: 100%;
+    }
+    .footer .hidden {
+        display: none;
     }    
 }
 .contact-us .container {
@@ -317,6 +395,85 @@ hr {
         box-shadow: 0 0 0 0.1rem orange;
     }
 }
+
+
+/* Menu Section  */
+ 
+.carousel {
+    background-color: rgba(128, 128, 128, 0.1);
+    color: black;
+}
+.caption {
+    width: 35%;
+
+}
+.caption h6 {
+    color: orange;
+}
+.caption h5 {
+    font-size: 3.5rem;
+}
+.carousel-img {
+    width: 450px;
+    height: 450px;
+    filter: drop-shadow(1px 1px 10px gray);
+    object-position: 40% 60%;
+}
+.carousel-control {
+    width: 6%;
+}
+.carousel-control i {
+    color: orange;
+    &::before {
+        
+    }
+}
+.carousel-indicators button {
+    background-color: orange !important;
+}
+
+footer {
+    box-shadow: 0 -2px  20px rgba(0, 0, 0, 0.1);
+}
+
+footer .footer{
+
+    height: 270px;
+}
+footer span  ,i{
+    color: orange;
+}
+.footer p {
+    margin: 0;
+    font-size: 0.85rem;
+}
+.footer .phone {
+    background-color: orange;
+    color: white;
+    height: 33px;
+    /* width: 200px; */
+    align-content: center;
+    text-align: center;
+    border-radius: 16px;
+
+}
+.phone i {
+    color: white;
+
+}
+.w-20 {
+    width: 20%;
+}
+@media (max-width:1050px) {
+    .footer p {
+        font-size: 0.75rem;
+    }
+    .footer .hidden {
+        margin-top: 1rem !important;
+    }
+    
+}
+
   
   
   

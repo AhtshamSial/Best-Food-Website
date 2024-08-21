@@ -1,13 +1,16 @@
 const navbarCollapse = document.querySelector(".navbar-toggler");
+const navbar = document.querySelector(".navbar");
 const heroSection = document.querySelector(".bsb-hero-2");
 const btns = document.querySelectorAll('.menu-option .btn');
 const cards = document.querySelector('#cards');
 
+console.log(navbar.classList[4]);
+
 navbarCollapse.addEventListener('click' , () => {
-    if(heroSection.classList[2] === undefined){
-        heroSection.classList.add("m-top-320");
+    if(navbar.classList[4] === undefined){
+        navbar.classList.add("pb-360");
     } else {
-        heroSection.classList.remove("m-top-320");
+        navbar.classList.remove("pb-360");
     }
 
 

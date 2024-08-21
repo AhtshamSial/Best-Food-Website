@@ -288,6 +288,9 @@ hr {
     footer {
         margin-top: -50px;
     }
+    .footer ul {
+        font-size: 0.75rem !important;
+    }
 }
 
 .choice {
@@ -364,6 +367,9 @@ hr {
     }
     .footer .hidden {
         display: none;
+    }
+    .footer ul {
+        display: none !important;
     }    
 }
 .contact-us .container {
@@ -459,10 +465,10 @@ footer span ,footer i{
     background-color: orange;
     color: white;
     height: 33px;
-    /* width: 200px; */
     align-content: center;
     text-align: center;
     border-radius: 16px;
+    cursor: pointer;
 
 }
 .phone i {
@@ -480,6 +486,19 @@ footer span ,footer i{
         margin-top: 1rem !important;
     }
     
+}
+footer ul {
+    list-style: none;
+    gap: 0.5rem;
+    padding-left: 5rem;
+
+}
+footer ul li{
+    opacity: 0.5;
+    cursor: pointer;
+    &:hover {
+        opacity: 1;
+    }
 }
 
   

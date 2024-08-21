@@ -252,6 +252,7 @@ hr {
         align-items: center;
         text-align: center;
         width: 100%;
+        margin: 0 !important;
     }
     .text h4 {
         margin: 0 !important;
@@ -283,6 +284,9 @@ hr {
     }
     .copyright p {
         font-size: 0.7rem !important;
+    }
+    footer {
+        margin-top: -50px;
     }
 }
 
@@ -440,7 +444,10 @@ footer .footer{
 
     height: 270px;
 }
-footer span  ,i{
+.footer h1 {
+    width: 100px;
+}
+footer span ,footer i{
     color: orange;
 }
 .footer p {

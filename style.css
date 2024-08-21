@@ -424,7 +424,8 @@ hr {
     object-position: 40% 60%;
 }
 .carousel-control {
-    width: 6%;
+    width: 25px;
+    margin: 0 1rem;
 }
 .carousel-control i {
     color: orange;

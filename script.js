@@ -70,12 +70,12 @@ const cardsdData = [
         price : 30,
         type : "lunch",
     },
-    {
-        name : "Rind Snacks",
-        url : "img9.jpg",
-        price : 10,
-        type : "snacks",
-    },
+    // {
+    //     name : "Rind Snacks",
+    //     url : "img9.jpg",
+    //     price : 10,
+    //     type : "snacks",
+    // },
 
 ];
 

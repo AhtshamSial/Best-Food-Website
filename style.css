@@ -41,6 +41,9 @@ body {
 .pb-360 {
     padding-bottom: 430px;
 }
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem orange !important;
+}
 .navbar {
     height: 80px !important;
     background-color: white !important;
@@ -92,7 +95,7 @@ body {
 }
 .bsb-hero-2 .img-container .img-fluid{
     height: 400px;
-    background-image: url("Hero-section.jpg");
+    background-image: url("images/Hero-section.jpg");
     background-size: cover;
     background-position: 25% 75%;
 }
@@ -234,7 +237,7 @@ body {
 }
 .hiring-section .img-container .img-fluid {
     height: 400px;
-    background-image: url("chef.jpg");
+    background-image: url("images/chef.jpg");
     background-size: cover;
     background-position: 25% 75%;
 
@@ -321,7 +324,7 @@ body {
 }
 .services .img-fluid {
     height: 400px;
-    background-image: url("services.jpg");
+    background-image: url("images/services.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -521,9 +524,20 @@ footer ul li{
 
 }
 .s-img {
-    background-image: url("s-service.jpg") !important;
+    background-image: url("images/s-service.jpg") !important;
 }
 
+/* .carousel-item img {
+    background-color: aqua;
+} */
+
+.carousel-img {
+    width: 100%;
+    max-width: 370px; /* Set a maximum width */
+    height: 360px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the entire area */
+  }
+  
   
   
   

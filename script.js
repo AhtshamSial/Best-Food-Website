@@ -16,10 +16,13 @@ navbarCollapse.addEventListener('click' , () => {
 
 });
 
-window.onload = function() {
-    window.document.querySelector('.allfood').click();
+// const allFoodBtn = document.querySelector('.allfood');
 
-}
+// window.onload = function() {
+//     if(window.location.pathname === "/menu.html"){
+//         allFoodBtn.click();
+//     }
+// }
 
 const cardsdData = [
     {
@@ -85,7 +88,7 @@ function getDishes(type) {
             cards.innerHTML +=`
             <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 p-0">
       <div class="card">
-        <img class="card-img-top object-fit-cover" src="${card.url}" alt="${card.name}">
+        <img class="card-img-top object-fit-cover" src="images\\${card.url}" alt="${card.name}">
         <div class="card-body">
           <h5 class="card-title ">${card.name}</h5>
           <p class="price position-absolute bottom-0 m-0 start-1 fw-bold fs-6">$${card.price}</p>
@@ -102,7 +105,7 @@ function getAllFood() {
         cards.innerHTML +=`
                 <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 p-0">
           <div class="card">
-            <img class="card-img-top object-fit-cover" src="${card.url}" alt="${card.name}">
+            <img class="card-img-top object-fit-cover" src="images\\${card.url}" alt="${card.name}">
             <div class="card-body">
               <h5 class="card-title ">${card.name}</h5>
               <p class="price position-absolute bottom-0 m-0 start-1 fw-bold fs-6">$${card.price}</p>

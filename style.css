@@ -135,84 +135,6 @@ body {
     height: 65%;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-    .menu-section .container {
-        max-width: 760px;
-    }
-    .footer p {
-        font-size: 0.65rem !important;
-    }
-}
-
-@media (min-width: 1200px) {
-    .menu-section .container {
-        max-width: 1000px;
-    }
-    .s-container{
-        max-width: 1100px;
-    }
-
-
-}
-
-@media (max-width: 575px) {
-    .menu-section .container {
-        max-width: 280px !important;
-    }
-
-    .apps img {
-        width: 80px !important;
-        height: 30px !important;
-    }
-    .menu-option {
-        padding-left: 100px !important;
-        padding-right: 20px !important;
-    }
-    .inner-container h5 {
-        font-size: 1rem !important;
-    }
-    .card {
-        width: 270px;
-        height: 23rem;
-    }
-    .contact-us .container {
-        box-shadow: none !important;
-        border-radius: 0 !important;
-    }
-    .footer {
-        padding-top: 1rem !important;
-    }
-    .footer p {
-        font-size: 0.6rem !important;
-        
-    }
-}
-@media (max-width : 500px) {
-    .menu-option {
-        padding-left: 200px !important;
-    }
-    .carousel-item .container .row {
-        padding: 0 2rem;
-    }
-    .footer {
-        padding: 2rem !important;
-    }
-    .footer p {
-        font-size: 0.65rem !important;
-    }
-}
-@media (max-width : 380px) {
-    .menu-option {
-        padding-left: 260px !important;
-    }
-    /* .carousel-item .container .row {
-        padding: 0 1rem;
-    } */
-    .carousel-img {
-        height: 350px !important;
-    }
-    
-}
 
 .card-body .btn {
     background-color: orange;
@@ -244,63 +166,6 @@ body {
 }
 .hiring-section .text p {
     height: 100px;
-}
-@media (max-width: 992px) {
-    .img-container {
-        width: 100% !important;
-        clip-path: polygon( 0 0, 100% 0,100% 100% , 0% 100%) !important;
-        margin-bottom: 3rem;
-
-    }
-    .text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        margin: 0 !important;
-    }
-    .text h4 {
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-    .hiring-section .text p {
-        width: 60%;
-    }
-    .wrap-992 {
-        flex-direction: column;
-        align-items: flex-start !important;
-        gap: 0.5rem;
-    }
-    .caption {
-        display: flex;
-        flex-direction: column;
-        width: 100% !important;
-        align-items: center;
-        margin-bottom: 4rem;
-    }
-    .caption p {
-        text-align: center;
-    }
-    .footer .phone {
-        width: 150px;
-    }
-    .w-20 {
-        width: 160px !important;
-    }
-    .copyright p {
-        font-size: 0.7rem !important;
-    }
-    footer {
-        margin-top: -50px;
-    }
-    .footer ul {
-        font-size: 0.75rem !important;
-    }
-    .s-text {
-        padding: 0 3.5rem;
-    }
-
 }
 
 .choice {
@@ -371,17 +236,7 @@ body {
 .hero p {
     width: 50%;
 }
-@media (max-width: 768px) {
-    .hero p {
-        width: 100%;
-    }
-    .footer .hidden {
-        display: none;
-    }
-    .footer ul {
-        display: none !important;
-    }    
-}
+
 .contact-us .container {
     background-color: white;
     position: relative;
@@ -489,15 +344,7 @@ footer span ,footer i{
 .w-20 {
     width: 20%;
 }
-@media (max-width:1050px) {
-    .footer p {
-        font-size: 0.75rem;
-    }
-    .footer .hidden {
-        margin-top: 1rem !important;
-    }
-    
-}
+
 footer ul {
     list-style: none;
     gap: 0.5rem;
@@ -527,16 +374,249 @@ footer ul li{
     background-image: url("images/s-service.jpg") !important;
 }
 
-/* .carousel-item img {
-    background-color: aqua;
-} */
-
 .carousel-img {
     width: 100%;
-    max-width: 370px; /* Set a maximum width */
-    height: 360px; /* Set a fixed height */
-    object-fit: cover; /* Ensure the image covers the entire area */
+    max-width: 370px;
+    height: 360px; 
+    object-fit: cover; 
   }
+
+  /* About Us  */
+
+
+  .ju-container {
+    max-width: 100%;
+  }
+
+  
+  .ju-container .ju-text {
+    width: 40%;
+
+  }
+
+.about-us-section .a-img-container {
+    height: 370px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  .about-us-section img {
+    object-fit: cover;
+    height: 350px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3),-2px -2px 10px rgba(0, 0, 0, 0.3) ;
+  }
+  
+
+  .about-us-section hr {
+    width: 60px;
+    height: 3px;
+    background-color: orange;
+}
+.a-container .card{
+    width: 400px;
+    height: 400px;
+
+}
+.a-container .card-img {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.a-container p {
+    height: 120px;
+    overflow-y: auto;
+}
+.a-container hr {
+    background-color: orange;
+    height: 2px;
+    width: 50px;
+}
+
+
+@media (max-width:1050px) {
+    .footer p {
+        font-size: 0.75rem;
+    }
+    .footer .hidden {
+        margin-top: 1rem !important;
+    }
+    
+}
+@media (max-width: 992px) {
+    .img-container {
+        width: 100% !important;
+        clip-path: polygon( 0 0, 100% 0,100% 100% , 0% 100%) !important;
+        margin-bottom: 3rem;
+
+    }
+    .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin: 0 !important;
+    }
+    .text h4 {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .hiring-section .text p {
+        width: 60%;
+    }
+    .wrap-992 {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 0.5rem;
+    }
+    .caption {
+        display: flex;
+        flex-direction: column;
+        width: 100% !important;
+        align-items: center;
+        margin-bottom: 4rem;
+    }
+    .caption p {
+        text-align: center;
+    }
+    .footer .phone {
+        width: 150px;
+    }
+    .w-20 {
+        width: 160px !important;
+    }
+    .copyright p {
+        font-size: 0.7rem !important;
+    }
+    footer {
+        margin-top: -50px;
+    }
+    .footer ul {
+        font-size: 0.75rem !important;
+    }
+    .s-text ,.a-text{
+        padding: 0 3.5rem;
+    }
+    .a-container {
+        margin-bottom: 2rem !important;
+    }
+    .ju-text {
+        width: 100% !important;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+    .ju-text p {
+        width: 80%;
+    }
+    .about-us-section {
+        margin-bottom: 5rem !important;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .hero p {
+        width: 100%;
+    }
+    .footer .hidden {
+        display: none;
+    }
+    .footer ul {
+        display: none !important;
+    }
+    .ju-container {
+        padding: 0 !important;
+    }    
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .menu-section .container {
+        max-width: 760px;
+    }
+    .footer p {
+        font-size: 0.65rem !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .menu-section .container {
+        max-width: 1000px;
+    }
+    .s-container {
+        max-width: 1100px;
+    }
+    .a-container {
+        max-width: 1200px;
+    }
+
+
+}
+
+@media (max-width: 575px) {
+    .menu-section .container {
+        max-width: 280px !important;
+    }
+
+    .apps img {
+        width: 80px !important;
+        height: 30px !important;
+    }
+    .menu-option {
+        padding-left: 100px !important;
+        padding-right: 20px !important;
+    }
+    .inner-container h5 {
+        font-size: 1rem !important;
+    }
+    .card {
+        width: 270px;
+        height: 23rem;
+    }
+    .contact-us .container {
+        box-shadow: none !important;
+        border-radius: 0 !important;
+    }
+    .footer {
+        padding-top: 1rem !important;
+    }
+    .footer p {
+        font-size: 0.6rem !important;
+        
+    }
+}
+@media (max-width : 500px) {
+    .menu-option {
+        padding-left: 200px !important;
+    }
+    .carousel-item .container .row {
+        padding: 0 2rem;
+    }
+    .footer {
+        padding: 2rem !important;
+    }
+    .footer p {
+        font-size: 0.65rem !important;
+    }
+}
+@media (max-width : 380px) {
+    .menu-option {
+        padding-left: 260px !important;
+    }
+    /* .carousel-item .container .row {
+        padding: 0 1rem;
+    } */
+    .carousel-img {
+        height: 350px !important;
+    }
+    
+}
+
+
   
   
   

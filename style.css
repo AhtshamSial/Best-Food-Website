@@ -39,7 +39,10 @@ body {
     overflow-x: hidden;
 }
 .pb-360 {
-    padding-bottom: 430px;
+    padding-bottom: 405px;
+}
+.pb-450 {
+    padding-bottom: 450px;
 }
 .navbar-toggler:focus {
     box-shadow: 0 0 0 0.2rem orange !important;
@@ -603,6 +606,15 @@ footer ul li{
         font-size: 0.65rem !important;
     }
 }
+@media (max-width : 430px) {
+    .navbar {
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+
+    }
+    
+}
 @media (max-width : 380px) {
     .menu-option {
         padding-left: 260px !important;
@@ -615,6 +627,13 @@ footer ul li{
     }
     
 }
+@media (max-width : 300px) {
+    .login-signup {
+        width: 200px;
+    }
+    
+}
+
 
 
   

@@ -4,16 +4,24 @@ const heroSection = document.querySelector(".bsb-hero-2");
 const btns = document.querySelectorAll('.menu-option .btn');
 const cards = document.querySelector('#cards');
 
-console.log(navbar.classList[4]);
+console.log(window.innerWidth);
 
 navbarCollapse.addEventListener('click' , () => {
-    if(navbar.classList[4] === undefined){
-        navbar.classList.add("pb-360");
-    } else {
-        navbar.classList.remove("pb-360");
+    if(window.innerWidth <= 300){
+        if(navbar.classList[4] === undefined){
+            navbar.classList.add("pb-450");
+        } else {
+            navbar.classList.remove("pb-450");
+        }
+
+    }else{
+        if(navbar.classList[4] === undefined){
+            navbar.classList.add("pb-360");
+        } else {
+            navbar.classList.remove("pb-360");
+        }
+
     }
-
-
 });
 
 // const allFoodBtn = document.querySelector('.allfood');
@@ -117,7 +125,11 @@ function getAllFood() {
     });
 }
 
-getAllFood();
+const pageName = window.location.pathname.split("/").pop();
+if(pageName === "index.html" || pageName === "menu.html"){
+    getAllFood();
+}
+
 
 btns.forEach((btn) => {    
     btn.addEventListener('click', () => {

@@ -473,6 +473,7 @@ footer ul li{
 .modal-container .info {
     background: linear-gradient(170deg, #ff9a00 , #ff7400);
     color: white; 
+    transition: all 0.5s ease-in;
 }
 .modal-container .login-info {
     border-top-right-radius: 10px;
@@ -514,6 +515,10 @@ footer ul li{
 #signupForm .btn1{
     display: none;
 }
+#signupForm .extra-div {
+    height: 50px;
+}
+
 
 
 .icons i{
@@ -710,7 +715,7 @@ footer ul li{
         height: fit-content;
         padding-bottom: 1.5rem;
     }
-    #signupForm .btn2  {
+    #signupForm .btn2 ,#signupForm .extra-div {
         display: none;
     }
     #signupForm .btn1 {

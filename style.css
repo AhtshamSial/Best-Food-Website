@@ -4,19 +4,23 @@
     box-sizing: border-box;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+:root {
+    --primary-color : #ff7400;
+}
+
 .bg-custom {
-    background-color: orange !important;
+    background-color: var(--primary-color) !important;
     &:hover{
-        background-color: orange;
+        background-color: var(--primary-color);
         box-shadow: 1px 1px 10px  rgba(0, 0, 0, 0.3);
     }
     &:active {
-        background-color: orange !important;
-        border-color:orange !important;
+        background-color: var(--primary-color) !important;
+        border-color: var(--primary-color) !important;
     }
 }
 .custom-color {
-    color: orange;
+    color: var(--primary-color);
 }
 .fs-7 {
     font-size: 0.85rem;
@@ -45,7 +49,7 @@ body {
     padding-bottom: 450px;
 }
 .navbar-toggler:focus {
-    box-shadow: 0 0 0 0.2rem orange !important;
+    box-shadow: 0 0 0 0.2rem var(--primary-color) !important;
 }
 .navbar {
     height: 80px !important;
@@ -60,7 +64,7 @@ body {
     height: 80px;
 }
 .navbar-brand span {
-    color: orange;
+    color: var(--primary-color);
 }
 .nav-item {
     font-size: 1.1rem;
@@ -73,11 +77,11 @@ body {
     width: 7rem;
     height: 2.5rem;
     margin-left: 0.70rem;
-    border: 2px solid orange;   
+    border: 2px solid var(--primary-color);   
 
 }
 .login-signup .login {
-    color: orange;
+    color: var(--primary-color);
     font-weight: 600;
 }
 .login-signup .signup {
@@ -86,7 +90,7 @@ body {
 }
 .bsb-hero-2 {
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 .bsb-hero-2 .container .text {
     margin-left: 5rem;
@@ -109,17 +113,17 @@ body {
 }
 .menu-section hr {
     width: 5rem;
-    background-color: orange;
+    background-color: var(--primary-color);
     height: 3px;
 }
 .menu-option .btn-light:hover {
     border: transparent;
-    color: orange;
+    color: var(--primary-color);
     background-color: #f8f9fa;
 
 }
 .active-btn{
-        background-color: orange !important;
+        background-color: var(--primary-color) !important;
         color: white !important;
         border: transparent;
         box-shadow: 1px 1px 10px  rgba(0, 0, 0, 0.3);
@@ -140,7 +144,7 @@ body {
 
 
 .card-body .btn {
-    background-color: orange;
+    background-color: var(--primary-color);
     width: 2.5rem;
     height: 1.7rem;
     border-bottom-right-radius: 6px !important;
@@ -229,7 +233,7 @@ body {
 }
 
 .hero {
-    background-color: orange;
+    background-color: var(--primary-color);
     color: white;
     height: 400px;
 }
@@ -255,11 +259,11 @@ body {
     background-color:rgba(128, 128, 128, 0.1)  ;
 }
 .info h5 i {
-    color: orange;
+    color: var(--primary-color);
     margin-right: 1rem;
 }
 .input-data button {
-    background-color: orange !important;
+    background-color: var(--primary-color) !important;
     height: 2.5rem;
     font-weight: 600;
     &:hover {
@@ -270,7 +274,7 @@ body {
     transition: box-shadow 0.3s ease-in-out !important;
     &:focus {
         outline: none;
-        box-shadow: 0 0 0 0.1rem orange;
+        box-shadow: 0 0 0 0.1rem var(--primary-color);
     }
 }
 
@@ -287,7 +291,7 @@ body {
 
 }
 .caption h6 {
-    color: orange;
+    color: var(--primary-color);
 }
 .caption h5 {
     font-size: 3.5rem;
@@ -303,13 +307,10 @@ body {
     margin: 0 1rem;
 }
 .carousel-control i {
-    color: orange;
-    &::before {
-        
-    }
+    color: var(--primary-color);
 }
 .carousel-indicators button {
-    background-color: orange !important;
+    background-color: var(--primary-color) !important;
 }
 
 footer {
@@ -324,14 +325,14 @@ footer .footer{
     width: 100px;
 }
 footer span ,footer i{
-    color: orange;
+    color: var(--primary-color);
 }
 .footer p {
     margin: 0;
     font-size: 0.85rem;
 }
 .footer .phone {
-    background-color: orange;
+    background-color: var(--primary-color);
     color: white;
     height: 33px;
     align-content: center;
@@ -414,7 +415,7 @@ footer ul li{
   .about-us-section hr {
     width: 60px;
     height: 3px;
-    background-color: orange;
+    background-color: var(--primary-color);
 }
 .a-container .card{
     width: 400px;
@@ -434,13 +435,114 @@ footer ul li{
     overflow-y: auto;
 }
 .a-container hr {
-    background-color: orange;
+    background-color: var(--primary-color);
     height: 2px;
     width: 50px;
 }
 
 
-@media (max-width:1050px) {
+
+/* login-signup form */
+
+.modal-container {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+
+}
+
+
+.modal-container .container {
+    width: 800px;
+    background-color: white;
+    border: 1px solid #888;
+    border-radius: 10px;
+} 
+
+.modal-container .form-control {
+    height: 40px;
+}
+
+.modal-container .info {
+    background: linear-gradient(170deg, #ff9a00 , #ff7400);
+    color: white; 
+}
+.modal-container .login-info {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius:10px ;  
+}
+.login-info.col-12 ,.input-data.col-12  ,.signup-info.col-12{
+    flex: auto;
+}
+.modal-container .signup-info {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius:10px ; 
+}
+.modal-container .info p {
+    font-size: 0.9rem;
+}
+.close-btn {
+    font-size: 2.5rem;
+    top: -10px;
+    left: -0.85rem;
+    cursor: pointer;
+    opacity: 0.5;
+    &:hover {
+        opacity: 1;
+    }
+}
+.modal-container .info .btn {
+    font-size: 0.9rem;
+    background-color: 	#ffbf0042 ;
+    color: white;
+    width: auto;
+    height: 45px;
+    border-radius: 22px;
+    padding: 0 1.5rem;
+    &:hover {
+        background-color:#ff7400 ;
+    }
+}
+
+#signupForm .btn1{
+    display: none;
+}
+
+
+.icons i{
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    color: white;
+}
+.icons i{
+    &:first-child{
+        background-color: #3b5998;
+    }
+    &:nth-child(2){
+        background-color: black;
+    }
+    &:nth-child(3) {
+        background-color: #ea4335;
+    }
+
+}
+/* media queries */
+
+
+@media (max-width: 1050px) {
+
     .footer p {
         font-size: 0.75rem;
     }
@@ -449,6 +551,7 @@ footer ul li{
     }
     
 }
+
 @media (max-width: 992px) {
     .img-container {
         width: 100% !important;
@@ -534,7 +637,10 @@ footer ul li{
     }
     .ju-container {
         padding: 0 !important;
-    }    
+    }
+    /* #loginForm ,#signupForm{
+        max-width: 100%;
+    }     */
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -591,6 +697,29 @@ footer ul li{
         font-size: 0.6rem !important;
         
     }
+    #loginForm , #signupForm {
+        flex-wrap: wrap;
+        border-radius: 0 !important;    
+    }
+    .modal-container .info {
+        height: fit-content;
+        padding: 1.5rem 0;
+        border-radius: 0;
+    }
+    .modal-container .input-data {
+        height: fit-content;
+        padding-bottom: 1.5rem;
+    }
+    #signupForm .btn2  {
+        display: none;
+    }
+    #signupForm .btn1 {
+        display: block;
+    }
+    #signupForm .input-data h2 {
+        margin-top: 0 !important;
+    }
+
 }
 @media (max-width : 500px) {
     .menu-option {

@@ -3,8 +3,11 @@ const navbar = document.querySelector(".navbar");
 const heroSection = document.querySelector(".bsb-hero-2");
 const btns = document.querySelectorAll('.menu-option .btn');
 const cards = document.querySelector('#cards');
+const loginBtn = document.querySelector(".login");
+const signupBtn = document.querySelector(".signup");
+const modal = document.querySelector(".modal-container");
 
-console.log(window.innerWidth);
+
 
 navbarCollapse.addEventListener('click' , () => {
     if(window.innerWidth <= 300){
@@ -12,6 +15,7 @@ navbarCollapse.addEventListener('click' , () => {
             navbar.classList.add("pb-450");
         } else {
             navbar.classList.remove("pb-450");
+            navbar.classList.remove("pb-360");
         }
 
     }else{
@@ -19,18 +23,70 @@ navbarCollapse.addEventListener('click' , () => {
             navbar.classList.add("pb-360");
         } else {
             navbar.classList.remove("pb-360");
+            navbar.classList.remove("pb-450");
         }
 
     }
 });
 
-// const allFoodBtn = document.querySelector('.allfood');
+// const modal = document.querySelector(".modal-container");
+// console.log(modal);
 
-// window.onload = function() {
-//     if(window.location.pathname === "/menu.html"){
-//         allFoodBtn.click();
-//     }
-// }
+
+
+window.onload = function() {
+    fetch('login-signup.html')
+        .then(response => response.text())
+        .then(html => {
+
+            modal.innerHTML = html;
+            const loginForm = document.getElementById("loginForm");
+            const signupForm = document.getElementById("signupForm");
+            const showSignupFormLink = document.getElementById("showSignupForm");
+            const showLoginFormLink = document.getElementById("showLoginForm");
+            const closeBtn = document.querySelectorAll(".close-btn"); 
+
+            loginBtn.onclick = function() {
+                modal.style.display = "flex";
+                loginForm.classList.remove("d-none");
+                signupForm.classList.add("d-none");
+            }
+            
+            signupBtn.onclick = function() {
+                modal.style.display = "flex";
+                signupForm.classList.remove("d-none");
+                loginForm.classList.add("d-none");
+            }
+            
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+            closeBtn.forEach(button => {
+                button.onclick = () => {
+                    modal.style.display = "none";
+                };
+            });
+            
+            showSignupFormLink.onclick = function() {
+                signupForm.classList.remove("d-none");
+                loginForm.classList.add("d-none");
+            }
+            
+            showLoginFormLink.onclick = function() {
+                loginForm.classList.remove("d-none");
+                signupForm.classList.add("d-none");
+            }
+                        
+        });
+};
+
+
+
+
+
+
 
 const cardsdData = [
     {
@@ -108,6 +164,8 @@ function getDishes(type) {
         }
     })
 }
+
+
 function getAllFood() {
     cardsdData.map( (card) => {
         cards.innerHTML +=`
@@ -124,6 +182,7 @@ function getAllFood() {
 
     });
 }
+
 
 const pageName = window.location.pathname.split("/").pop();
 if(pageName === "index.html" || pageName === "menu.html"){

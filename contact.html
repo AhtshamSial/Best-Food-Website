@@ -12,8 +12,8 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary px-6">
-        <div class="container-fluid">
-          <a class="navbar-brand p-0 m-0 d-flex justify-content-center align-items-center" href="#"><h1 class="fs-5">Best<span>-Food</span></h1></a>
+        <div class="container-fluid p-0">
+          <a class="navbar-brand p-0 m-0 d-flex justify-content-center align-items-center" href="index.html"><h1 class="fs-5">Best<span>-Food</span></h1></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -26,7 +26,7 @@
                 <a class="nav-link" href="services.html">Service</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
+                <a class="nav-link text-nowrap" href="about.html">About Us</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="menu.html">Menu</a>
@@ -57,21 +57,21 @@
       </section>
       <section class="contact-us w-100 h-auto d-flex justify-content-center position-relative z-index-3">
         <div class="container d-flex p-0 flex-wrap m-0 justify-content-center flex-row-reverse">
-            <div class="input-data col-12 col-md-6 px-5 d-flex flex-column pt-5">
+            <form class="input-data col-12 col-md-6 px-5 d-flex flex-column pt-5" action="" method="post">
                 <div class="mb-3">
                     <label for="name" class="form-label fw-bold">Name</label>
-                    <input type="text" class="form-control border-0" id="name">
+                    <input type="text" class="form-control border-0" id="name" name="name">
                 </div>   
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label fw-bold">Email address</label>
-                    <input type="email" class="form-control border-0" id="exampleFormControlInput1" placeholder="name@example.com">
+                    <input type="email" class="form-control border-0" id="exampleFormControlInput1" name="email" placeholder="name@example.com">
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label fw-bold">How can we help?</label>
-                    <textarea class="form-control border-0" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control border-0" id="exampleFormControlTextarea1" name="message" rows="3"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary border-0 ">Submit</button>
-            </div>
+                <button type="submit" class="btn btn-primary border-0">Submit</button>
+            </form>
             <div class="info col-12 col-md-6 ps-5 d-flex flex-column justify-content-evenly">
                 <div>
                     <h5 class="fs-6 fw-bold"><i class="fa-solid fa-phone"></i>CALL US</h5>
@@ -83,11 +83,12 @@
                 </div>
                 <div>
                     <h5 class="fs-6 fw-bold"><i class="fa-solid fa-clock"></i>BUSINESS HOURS</h5>
-                    <P>Mon - Fri....10 am - 8 pm, Sat, Sun....Closed</P>
+                    <p>Mon - Fri....10 am - 8 pm, Sat, Sun....Closed</p>
                 </div>
             </div>
         </div>
     </section>
+    
     <footer>
       <div class="footer vw-100 px-6 m-0 pt-5 d-flex justify-content-between">
         <div class="w-25">
@@ -128,6 +129,10 @@
         <p class="text-center px-3 fs-6">© Copyright 2024 All rights of publications are reserved by Best Food</p>
       </div>
     </footer>
+
+    <div id="loginSignupModal" class="modal-container  justify-content-center align-items-center">
+
+    </div> 
 
     
       <script src="script.js"></script>

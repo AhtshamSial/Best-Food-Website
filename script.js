@@ -198,6 +198,12 @@ function getAllFood() {
     });
 }
 
+(function() {
+    const pageName = window.location.pathname.split("/").pop();
+    if (pageName === "index.html" || pageName === "menu.html") {
+        getAllFood();
+    }
+})();
 
 btns.forEach((btn) => {    
     btn.addEventListener('click', () => {
@@ -220,9 +226,3 @@ function removeActiveClasses() {
     })
 }
 
-window.addEventListener('load', function() {
-    const pageName = window.location.pathname.split("/").pop();
-    if (pageName === "index.html" || pageName === "menu.html") {
-        getAllFood();
-    }
-});

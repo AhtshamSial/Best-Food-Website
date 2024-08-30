@@ -200,10 +200,19 @@ function getAllFood() {
 
 (function() {
     const pageName = window.location.pathname.split("/").pop();
-    if (pageName === "index.html" || pageName === "menu.html") {
-        getAllFood();
+
+    if (pageName === "" || pageName === "index.html" || pageName === "menu.html") {
+
+        if (document.readyState === "complete" || document.readyState === "interactive") {
+            getAllFood();
+        } else {
+            document.addEventListener("DOMContentLoaded", function() {
+                getAllFood();
+            });
+        }
     }
 })();
+
 
 btns.forEach((btn) => {    
     btn.addEventListener('click', () => {

@@ -4,9 +4,19 @@
     box-sizing: border-box;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+html {
+    scroll-behavior: smooth;
+}
 :root {
     --primary-color : #ff7400;
     --secondry-color :  #ff9a00;
+}
+.btn {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
 }
 
 .bg-custom {
@@ -44,10 +54,10 @@ body {
     overflow-x: hidden;
 }
 .pb-360 {
-    padding-bottom: 405px;
+    padding-bottom: 405px !important;
 }
 .pb-450 {
-    padding-bottom: 450px;
+    padding-bottom: 450px !important;
 }
 .navbar-toggler:focus {
     box-shadow: 0 0 0 0.2rem var(--primary-color) !important;
@@ -57,6 +67,8 @@ body {
     background-color: white !important;
     transition: padding-bottom 0.5s ease-in-out !important;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding-top: 0;
+    padding-bottom: 0;
 }
 .navbar-nav {
     width: 42% !important;
@@ -70,7 +82,35 @@ body {
 .nav-item {
     font-size: 1.1rem;
     font-weight: 630;
+
 }
+
+.nav-link {
+    position: relative;
+    padding-bottom: 4px;
+    width: fit-content;
+
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.4s ease-in-out;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+
+
+
+
 .cart-search :last-child {
     font-size: 1.2rem;
 }
@@ -145,6 +185,12 @@ body {
     width: 220px;
     height: 20rem;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    &:hover{
+        transform: translateY(-10px);
+
+    }
 
 }
 .card-img-top {
@@ -194,6 +240,11 @@ body {
 .hiring-section .text p {
     height: 100px;
 }
+.services hr {
+    background-color: var(--primary-color) !important;
+    height: 3px;
+    width: 100px;
+}
 
 .choice {
     width: 140px;
@@ -201,6 +252,7 @@ body {
     padding: 0 !important;
 }
 .choice div {
+    cursor: pointer;
     height: 60px;
     width: 60px;
     border-radius: 50%;
@@ -208,6 +260,12 @@ body {
     justify-content: center;
     align-items: center;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    &:hover {
+        transform: translateY(-10px);
+        background-color: var(--primary-color);
+        color: white;
+    }
 
 }
 .services .img-container {
@@ -437,6 +495,7 @@ footer ul li{
     height: 3px;
     background-color: var(--primary-color);
 }
+
 .a-container .card{
     width: 400px;
     height: 400px;
@@ -475,16 +534,33 @@ footer ul li{
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 
 }
 
 
+.modal-container.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
 .modal-container .container {
+    position: relative;
+    background: white;
     width: 800px;
     background-color: white;
     border: 1px solid #888;
-    border-radius: 10px;
+    border-radius: 12px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 } 
+.modal-container.show  .container{
+    opacity: 1;
+    transform: scale(1);
+}
 
 .modal-container .form-control {
     height: 40px;
@@ -578,12 +654,25 @@ footer ul li{
 }
 
 @media (max-width: 992px) {
+
+    .navbar-nav {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .nav-item {
+        padding: 0 !important;
+        padding-bottom: 4px !important;
+    }
+    .navbar-brand {
+        padding: 0 !important;
+    }
     .img-container {
         width: 100% !important;
         clip-path: polygon( 0 0, 100% 0,100% 100% , 0% 100%) !important;
         margin-bottom: 3rem;
 
     }
+
     .text {
         display: flex;
         flex-direction: column;
@@ -591,6 +680,7 @@ footer ul li{
         text-align: center;
         width: 100%;
         margin: 0 !important;
+        padding: 1rem;
     }
     .text h4 {
         margin: 0 !important;
@@ -663,9 +753,11 @@ footer ul li{
     .ju-container {
         padding: 0 !important;
     }
-    /* #loginForm ,#signupForm{
-        max-width: 100%;
-    }     */
+    .services p {
+        height: 100px;
+        overflow: auto;
+    }
+
 }
 
 @media (min-width: 768px) and (max-width: 991px) {

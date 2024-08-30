@@ -26,6 +26,33 @@ navbarCollapse.addEventListener('click' , () => {
 });
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll('.nav-link');
+
+    // Function to set the active link
+    function setActiveLink() {
+        // Clear existing active classes
+        links.forEach(link => link.classList.remove('active'));
+
+        // Add active class to the matching link
+        links.forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    setActiveLink();
+
+    links.forEach(link => {
+        link.addEventListener('click', function() {
+            setActiveLink();
+        });
+    });
+});
+
+
+
 
 window.addEventListener('load', function() {
     console.log("confirm");
@@ -56,23 +83,32 @@ window.addEventListener('load', function() {
                         modal.style.display = "flex";
                         loginForm.classList.remove("d-none");
                         signupForm.classList.add("d-none");
+                        setTimeout(() => {
+                            modal.classList.add("show");
+                        },10);
+
                     }
 
                     signupBtn.onclick = function() {
-                        modal.style.display = "flex";
+                        modal.style.display = "flex";                      
                         signupForm.classList.remove("d-none");
                         loginForm.classList.add("d-none");
+                        setTimeout(() => {
+                            modal.classList.add("show");
+                        },10);
                     }
 
                     window.onclick = function(event) {
                         if (event.target == modal) {
                             modal.style.display = "none";
+                            modal.classList.remove("show");
                         }
                     }
 
                     closeBtn.forEach(button => {
                         button.onclick = () => {
                             modal.style.display = "none";
+                            modal.classList.remove("show");
                         };
                     });
 

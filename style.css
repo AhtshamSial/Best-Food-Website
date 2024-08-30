@@ -6,6 +6,7 @@
 }
 :root {
     --primary-color : #ff7400;
+    --secondry-color :  #ff9a00;
 }
 
 .bg-custom {
@@ -77,12 +78,20 @@ body {
     width: 7rem;
     height: 2.5rem;
     margin-left: 0.70rem;
-    border: 2px solid var(--primary-color);   
+    border: 2px solid var(--primary-color) ;   
 
 }
 .login-signup .login {
-    color: var(--primary-color);
+    color: var(--primary-color) ;
     font-weight: 600;
+    &:active{
+        color: white !important;
+    }
+}
+.btn:active {
+    background-color: var(--secondry-color) !important;
+    border-color: var(--secondry-color) !important;
+
 }
 .login-signup .signup {
     color: white;
@@ -153,6 +162,17 @@ body {
 .card-body p {
     left: 0.5rem;
 }
+
+.arrows button {
+    color: var(--primary-color);
+    opacity: 0.5;
+    &:hover {
+        box-shadow: none;
+        opacity: 1;
+    }
+}
+
+
 
 .hiring-section .img-container {
     background-color: antiquewhite;
@@ -471,7 +491,7 @@ footer ul li{
 }
 
 .modal-container .info {
-    background: linear-gradient(170deg, #ff9a00 , #ff7400);
+    background: linear-gradient(170deg, #ff9a00 , var(--primary-color));
     color: white; 
     transition: all 0.5s ease-in;
 }

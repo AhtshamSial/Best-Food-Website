@@ -3,10 +3,6 @@ const navbar = document.querySelector(".navbar");
 const heroSection = document.querySelector(".bsb-hero-2");
 const btns = document.querySelectorAll('.menu-option .btn');
 const cards = document.querySelector('#cards');
-const loginBtn = document.querySelector(".login");
-const signupBtn = document.querySelector(".signup");
-const modal = document.querySelector(".modal-container");
-
 
 
 navbarCollapse.addEventListener('click' , () => {
@@ -29,58 +25,77 @@ navbarCollapse.addEventListener('click' , () => {
     }
 });
 
-// const modal = document.querySelector(".modal-container");
-// console.log(modal);
 
 
+window.addEventListener('load', function() {
+    console.log("confirm");
 
-window.onload = function() {
-    fetch('login-signup.html')
-        .then(response => response.text())
-        .then(html => {
+    const modal = document.querySelector(".modal-container");
+    const loginBtn = document.querySelector(".login");
+    const signupBtn = document.querySelector(".signup");
 
-            modal.innerHTML = html;
-            const loginForm = document.getElementById("loginForm");
-            const signupForm = document.getElementById("signupForm");
-            const showSignupFormLink = document.getElementById("showSignupForm");
-            const showLoginFormLink = document.getElementById("showLoginForm");
-            const closeBtn = document.querySelectorAll(".close-btn"); 
-
-            loginBtn.onclick = function() {
-                modal.style.display = "flex";
-                loginForm.classList.remove("d-none");
-                signupForm.classList.add("d-none");
-            }
-            
-            signupBtn.onclick = function() {
-                modal.style.display = "flex";
-                signupForm.classList.remove("d-none");
-                loginForm.classList.add("d-none");
-            }
-            
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
+    if (modal && loginBtn && signupBtn) {
+        fetch('login-signup.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
                 }
-            }
-            closeBtn.forEach(button => {
-                button.onclick = () => {
-                    modal.style.display = "none";
-                };
+                return response.text();
+            })
+            .then(html => {
+               
+                modal.innerHTML = html;
+                const loginForm = document.getElementById("loginForm");
+                const signupForm = document.getElementById("signupForm");
+                const showSignupFormLink = document.getElementById("showSignupForm");
+                const showLoginFormLink = document.getElementById("showLoginForm");
+                const closeBtn = document.querySelectorAll(".close-btn");
+
+                if (loginForm && signupForm && showSignupFormLink && showLoginFormLink && closeBtn.length > 0) {
+                    loginBtn.onclick = function() {
+                        modal.style.display = "flex";
+                        loginForm.classList.remove("d-none");
+                        signupForm.classList.add("d-none");
+                    }
+
+                    signupBtn.onclick = function() {
+                        modal.style.display = "flex";
+                        signupForm.classList.remove("d-none");
+                        loginForm.classList.add("d-none");
+                    }
+
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+
+                    closeBtn.forEach(button => {
+                        button.onclick = () => {
+                            modal.style.display = "none";
+                        };
+                    });
+
+                    showSignupFormLink.onclick = function() {
+                        signupForm.classList.remove("d-none");
+                        loginForm.classList.add("d-none");
+                    }
+
+                    showLoginFormLink.onclick = function() {
+                        loginForm.classList.remove("d-none");
+                        signupForm.classList.add("d-none");
+                    }
+                } else {
+                    console.error('Some elements are missing in the loaded HTML.');
+                }
+            })
+            .catch(error => {
+                console.error('Fetch error: ', error);
             });
-            
-            showSignupFormLink.onclick = function() {
-                signupForm.classList.remove("d-none");
-                loginForm.classList.add("d-none");
-            }
-            
-            showLoginFormLink.onclick = function() {
-                loginForm.classList.remove("d-none");
-                signupForm.classList.add("d-none");
-            }
-                        
-        });
-};
+    } else {
+        console.error('Modal or buttons are missing.');
+    }
+});
 
 
 
@@ -184,12 +199,6 @@ function getAllFood() {
 }
 
 
-const pageName = window.location.pathname.split("/").pop();
-if(pageName === "index.html" || pageName === "menu.html"){
-    getAllFood();
-}
-
-
 btns.forEach((btn) => {    
     btn.addEventListener('click', () => {
         removeActiveClasses()
@@ -210,3 +219,10 @@ function removeActiveClasses() {
         btn.classList.remove('active-btn')
     })
 }
+
+window.addEventListener('load', function() {
+    const pageName = window.location.pathname.split("/").pop();
+    if (pageName === "index.html" || pageName === "menu.html") {
+        getAllFood();
+    }
+});
